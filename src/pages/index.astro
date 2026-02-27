@@ -1,0 +1,255 @@
+---
+// import AlertBar from "../components/AlertBar.svelte";
+import Navbar from "../components/Navbar.svelte";
+import ToolsMarquee from "../components/ToolsMarquee.svelte";
+import ToTopButton from "../components/ToTopButton.svelte";
+
+// SCSS
+import "../scss/styles.scss";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aarav Maloo | Portfolio</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="hey! yes thats me. I am Aarav Maloo. thanks for actually taking the effort to viewing my site. I generally like to create errors, more errors, and even more errors; beacuse, why not?"
+    />
+    <meta name="author" content="Aarav Maloo" />
+    <meta name="robots" content="index, follow" />
+    <link
+      id="favicon_dark"
+      rel="icon"
+      href="/favicon_dark.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body data-theme="light">
+    <div class="grid-background"></div>
+
+    <!-- <AlertBar client:load /> -->
+    <Navbar client:load />
+
+    <section id="welcome" class="full-screen-section">
+      <div class="welcome-content">
+        <span class="logo-text">[aaravmaloo]</span>
+        <p style="font-weight: 100;">why not?</p>
+        <p style="font-weight: 100; margin-top: 1rem;">
+          <img
+            src="https://visitor-badge.laobi.icu/badge?page_id=aaravmaloo.aaravmaloo"
+            alt="Visitor Badge"
+          />
+        </p>
+      </div>
+    </section>
+
+    <section id="music-widget">
+      <center>
+        <img
+          src="https://novatorem-nine-pied-28.vercel.app/api/orchestrator"
+          alt="Now Playing Widget"
+          style="max-width: 900px; width: 100%; border-radius: 10px;"
+        />
+      </center>
+    </section>
+
+    <section id="about-me">
+      <h2>GitHub Snapshot</h2>
+      <div class="about-me-content" style="font-weight: 100;">
+        <p>This portfolio mirrors my README profile cards and links.</p>
+        <center style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <img
+            src="https://github-readme-stats-delta-henna-50.vercel.app/api?username=aaravmaloo&show_icons=true&count_private=true&include_all_commits=true&theme=highcontrast&hide_border=true"
+            alt="Aarav Maloo GitHub stats"
+            height="150"
+          />
+          <img
+            src="https://github-readme-stats-delta-henna-50.vercel.app/api/top-langs?username=aaravmaloo&layout=compact&theme=highcontrast&hide_border=true"
+            alt="Aarav Maloo top languages"
+            height="150"
+          />
+          <img
+            src="https://streak-stats.demolab.com?user=aaravmaloo&theme=highcontrast&hide_border=true"
+            alt="Aarav Maloo streak stats"
+            height="150"
+          />
+        </center>
+        <p>
+          <img
+            src="https://github-readme-activity-graph.vercel.app/graph?username=aaravmaloo&theme=high-contrast&hide_border=true"
+            alt="Aarav Maloo activity graph"
+            style="width: 100%; max-width: 900px; border-radius: 10px; margin-top: 1rem;"
+          />
+        </p>
+      </div>
+    </section>
+
+    <section id="my-tools">
+      <h2>My Tools</h2>
+      <div class="tools-circles-container"></div>
+      <ToolsMarquee client:load />
+    </section>
+
+    <section id="projects">
+      <h2>Showcase Repos (Best to Worst)</h2>
+      <div class="roadmap-container">
+        <div class="roadmap-section">
+          <h3>Ranked Projects</h3>
+          <div class="roadmap-list" style="font-weight: 100;">
+            <div class="roadmap-item">
+              <h4>1. apm</h4>
+              <p>Zero-knowledge CLI password manager using AES-256-GCM + Argon2id with team collaboration support.</p>
+              <a href="https://github.com/aaravmaloo/apm" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>2. xe</h4>
+              <p>Rust-first Python toolchain/package manager with lockfile-based deterministic installs and CAS cache.</p>
+              <a href="https://github.com/aaravmaloo/xe" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>3. fastget</h4>
+              <p>C++20 download accelerator with parallel chunks, resume state, and SHA-256 integrity checks.</p>
+              <a href="https://github.com/aaravmaloo/fastget" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>4. stonks</h4>
+              <p>CLI stock sandbox game with Go API/worker architecture and Supabase-backed game economy.</p>
+              <a href="https://github.com/aaravmaloo/stonks" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>5. cida</h4>
+              <p>AI-content detection platform with web API, async reporting, and Hugging Face-backed scoring pipeline.</p>
+              <a href="https://github.com/aaravmaloo/cida" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="roadmap-section">
+          <h3>More Projects</h3>
+          <div class="roadmap-list" style="font-weight: 100;">
+            <div class="roadmap-item">
+              <h4>6. blue_moon</h4>
+              <p>Modular all-in-one Discord bot in Python (`discord.py`) with cog architecture and SQLite persistence.</p>
+              <a href="https://github.com/aaravmaloo/blue_moon" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>7. pymusik</h4>
+              <p>Python music synthesis/composition engine with DSP pipeline and offline WAV/MIDI rendering.</p>
+              <a href="https://github.com/aaravmaloo/pymusik" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>8. brliant_calc</h4>
+              <p>Advanced scientific command-line calculator focused on fast syntax-driven workflows.</p>
+              <a href="https://github.com/aaravmaloo/brliant_calc" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>9. easypath</h4>
+              <p>Beginner-friendly pathlib wrapper that simplifies common file/folder operations in Python.</p>
+              <a href="https://github.com/aaravmaloo/easypath" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+            <div class="roadmap-item">
+              <h4>10. gitty</h4>
+              <p>A custom Git-like Python CLI project built to explore VCS internals and command workflows.</p>
+              <a href="https://github.com/aaravmaloo/gitty" class="item-link" target="_blank">View Repo <i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="project-buttons-container">
+        <div class="button-container">
+          <a href="https://github.com/aaravmaloo?tab=repositories" target="_blank" class="button"
+            ><b>All Repos</b> on GitHub <i class="bx bxl-github"></i></a
+          >
+          <div class="button-shadow"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <h2>Open Source Contributions</h2>
+      <div class="roadmap-container">
+        <div class="roadmap-section">
+          <h3>CosmicPredator/chibi-cli</h3>
+          <div class="roadmap-list" style="font-weight: 100;">
+            <div class="roadmap-item">
+              <h4>My PRs: 4</h4>
+              <p>Theme support, config loading, and command improvements merged through focused feature PRs.</p>
+              <a href="https://github.com/CosmicPredator/chibi-cli/pull/29" class="item-link" target="_blank">PR #29 <i class="bx bx-link-external"></i></a>
+              <br />
+              <a href="https://github.com/CosmicPredator/chibi-cli/pull/28" class="item-link" target="_blank">PR #28 <i class="bx bx-link-external"></i></a>
+              <br />
+              <a href="https://github.com/CosmicPredator/chibi-cli/pull/26" class="item-link" target="_blank">PR #26 <i class="bx bx-link-external"></i></a>
+              <br />
+              <a href="https://github.com/CosmicPredator/chibi-cli/pull/25" class="item-link" target="_blank">PR #25 <i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="roadmap-section">
+          <h3>ManojPanda3/google_map_leadgen</h3>
+          <div class="roadmap-list" style="font-weight: 100;">
+            <div class="roadmap-item">
+              <h4>My PRs: 1</h4>
+              <p>Added async producer-consumer lead pipeline and dynamic timeout slicing for better throughput.</p>
+              <a href="https://github.com/ManojPanda3/google_map_leadgen/pull/1" class="item-link" target="_blank">PR #1 <i class="bx bx-link-external"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="footer-links" style="font-weight: 100;">
+        <a
+          href="https://github.com/aaravmaloo"
+          target="_blank"
+          aria-label="GitHub Profile"><i class="bx bxl-github"></i></a
+        >
+        <a
+          href="https://www.linkedin.com/in/aarav-maloo-955946357/"
+          target="_blank"
+          aria-label="LinkedIn Profile"><i class="bx bxl-linkedin"></i></a
+        >
+        <a
+          href="https://twitter.com/aaravmaloo06"
+          target="_blank"
+          aria-label="Twitter Profile"><i class="bx bxl-twitter"></i></a
+        >
+        <a
+          href="https://www.youtube.com/@wq_neovim"
+          target="_blank"
+          aria-label="YouTube"><i class="bx bxl-youtube"></i></a
+        >
+        <a
+          href="https://instagram.com/aaravmaloo06"
+          target="_blank"
+          aria-label="Instagram"><i class="bx bxl-instagram"></i></a
+        >
+        <a
+          href="mailto:aaravmaloo06@gmail.com"
+          target="_blank"
+          aria-label="Email"><i class="bx bx-at"></i></a
+        >
+      </div>
+      <p class="copyright">Copyright Aarav Maloo 2026</p>
+    </footer>
+
+    <ToTopButton client:load />
+  </body>
+</html>
