@@ -6,6 +6,8 @@ import ToTopButton from "../components/ToTopButton.svelte";
 
 // SCSS
 import "../scss/styles.scss";
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <html lang="en">
@@ -13,7 +15,6 @@ import "../scss/styles.scss";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aarav Maloo | Portfolio</title>
-    <link rel="stylesheet" href="../../css/styles.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -37,7 +38,7 @@ import "../scss/styles.scss";
     <link
       id="favicon_dark"
       rel="icon"
-      href="/favicon_dark.png"
+      href={`${baseUrl}favicon_dark.png`}
       type="image/x-icon"
     />
   </head>
