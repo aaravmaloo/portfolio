@@ -8,6 +8,7 @@ import ToTopButton from "../components/ToTopButton.svelte";
 import "../scss/styles.scss";
 
 const baseUrl = import.meta.env.BASE_URL;
+const assetBase = baseUrl.endsWith("/") ? baseUrl : `${baseUrl}/`;
 ---
 
 <html lang="en">
@@ -38,7 +39,7 @@ const baseUrl = import.meta.env.BASE_URL;
     <link
       id="favicon_dark"
       rel="icon"
-      href={`${baseUrl}favicon_dark.png`}
+      href={`${assetBase}favicon_dark.png`}
       type="image/x-icon"
     />
   </head>
